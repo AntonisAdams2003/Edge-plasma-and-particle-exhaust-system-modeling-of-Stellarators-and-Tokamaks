@@ -14,8 +14,6 @@ Specifically, it models edge plasma transport using an extended 0D Two-Point mod
 
 ## **Repository Structure**
 
-### **1. Core Modules (Libraries)**
-
 #### `Two_Point_Model_Solver.py`
 Contains solvers for three simplified 0D edge plasma transport models.
 **Import them via:** `from Two_Point_Model_Solver import [SolverName]`
@@ -29,6 +27,9 @@ Contains solvers for three simplified 0D edge plasma transport models.
     *   **Inputs**: `n_upst`, `loss_alpha` **[eV^(1/2)]**, `loss_fcool` **[-]**, `loss_fconv` **[-]**, `Lc`, `x`, `theta` **[-]**, `q_SOL`
     *   **Outputs: Same as `TTPM`.**
 
+
+
+
 #### `Divertor_Subdivertor_Solver.py`
 **[Description needed]**
 *   **`Divertor_Subdivertor_Analytical`**
@@ -38,12 +39,17 @@ Contains solvers for three simplified 0D edge plasma transport models.
 *   **`Divertor_Subdivertor_Dirk`**
     *   **Inputs:** | **Outputs:**
 
-### **2. Execution & Post-Processing Scripts**
+
+
+
 
 #### `Post_Processing.py`
-**Integrates the two core modules above.** Provides a parametric post-processing script that solves the problem from the upstream to the subdivertor.
+Integrates the two core modules above. Provides a parametric post-processing script that solves the problem from the upstream to the subdivertor.
 *   **Inputs:** 
 *   **Outputs:** 
+
+
+
 
 #### `Subdivertor_Models_Comparison.py`
 Compares analytical expressions estimating subdivertor pressure (NOT divertor pressure) against experimental measurements **[Haak's paper] and previous models [Varoutis 2024, Fig 11]. Import via:** `from Subdivertor_Models_Comparison import [ModelName]`
@@ -57,7 +63,9 @@ Compares analytical expressions estimating subdivertor pressure (NOT divertor pr
 *   **`ParticleBalance_subdivertor`**: Particle balance model **introduced in this thesis**.
     *   **Inputs / Outputs: Same as `Litovoli_Haak_subdivertor`.**
 
-### **3. Analysis & Optimization Tools**
+
+
+
 
 #### `Fitted_Closed_Form_nt.py`
 Fits numerical results of the Extended Stellarator Two-Point model to a logarithmic function to approximate target particle density: `log(nt) = g(nu, loss_alpha, loss_fcool, loss_fconv)`.
@@ -66,10 +74,15 @@ Fits numerical results of the Extended Stellarator Two-Point model to a logarith
 
 > ⚠️ **CAUTION:** This expression is **strictly for providing initial guesses to a numerical solver**. Do not use it to estimate target density directly; exponentiating the logarithmic fit produces massive errors.
 
+
+
+
 #### `Bayesian_MAP_and_MCMC_Solver.py`
 Solves a toy-problem for free-parameter estimation using a simplified analytical Tokamak model and pseudo-data. **Executes Maximum A Posteriori (MAP) estimation and Markov Chain Monte Carlo (MCMC) algorithms to estimate the posterior distribution under strong vs. weak priors.**
 
-### **4. Archive**
+
+
+
 
 #### `Parallel_vs_Perpendicular_Conduction.py`
 Compares parallel and perpendicular heat conduction terms. Outputs a figure showing curves where `q_parallel_conduction = q_perpendicular_conduction` for Tokamaks/Stellarators and electrons/ions.
@@ -88,7 +101,7 @@ Compares parallel and perpendicular heat conduction terms. Outputs a figure show
 
 ## **References**
 1. **[Stangeby, P.C. - The Plasma Boundary of Magnetic Fusion Devices]**(https://www.routledge.com/The-Plasma-Boundary-of-Magnetic-Fusion-Devices/Stangeby/p/book/9780750305594)
-2. **[Feng, Y. et al. - Extended Stellarator Two-Point Model]**(https://iopscience.iop.org/article/10.1088/1741-4326/ae855c)
+2. **[N. Maaziz et al 2026 Nucl. Fusion 66 086037]**(https://iopscience.iop.org/article/10.1088/1741-4326/ae855c)
 
 ## **Author**
 **Antonis Adamopoulos**

@@ -6,15 +6,9 @@ This repository contains the **source code supporting** my Master's thesis: *"Si
 **Specifically, it models edge plasma transport using an extended 0D Two-Point model, and neutral gas transport in the divertor module via particle balance and conductance models.**
 
 ## **Prerequisites**
-**To run these scripts, you must install the following:**
+**The scripts are written in python and require the installation of the following libraries:**
 - `numpy`
 - `pandas`
-
-## **Usage Guidelines**
-**Follow these rules to reproduce the analysis:**
-- **Do not execute `Two_Point_Model_Solver.py` or `Divertor_Subdivertor_Solver.py` directly; they are module libraries meant to be imported.**
-- **Use `Post_Processing.py` to evaluate the upstream-to-subdivertor flow using ONLY upstream conditions.**
-- **Use the isolated subdivertor models in `Subdivertor_Models_Comparison.py` ONLY when the particle flow (`N_in`) through the pumping gaps is predefined.**
 
 ---
 
@@ -82,6 +76,14 @@ Compares parallel and perpendicular heat conduction terms. Outputs a figure show
 *   **Outputs**: **Figure of equilibrium curves**.
 
 ---
+
+
+## **Usage Guidelines**
+**Follow these rules to reproduce the analysis:**
+- **Do not execute `Two_Point_Model_Solver.py` or `Divertor_Subdivertor_Solver.py` directly; they are module libraries meant to be imported.**
+- **Use `Post_Processing.py` to evaluate the upstream-to-subdivertor flow using ONLY upstream conditions.**
+- **Use the isolated subdivertor models in `Subdivertor_Models_Comparison.py` ONLY when the particle flow (`N_in`) through the pumping gaps is predefined.**
+
 
 ## **References**
 1. **[Stangeby, P.C. - The Plasma Boundary of Magnetic Fusion Devices]**(https://www.routledge.com/The-Plasma-Boundary-of-Magnetic-Fusion-Devices/Stangeby/p/book/9780750305594)

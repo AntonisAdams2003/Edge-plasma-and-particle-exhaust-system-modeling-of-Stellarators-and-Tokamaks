@@ -17,7 +17,8 @@ This repository contains the **source code supporting** my Master's thesis: *"Si
 ### **1. Core Modules (Libraries)**
 
 #### `Two_Point_Model_Solver.py`
-Contains solvers for three simplified 0D edge plasma transport models. **Import them via:** `from Two_Point_Model_Solver import [SolverName]`
+Contains solvers for three simplified 0D edge plasma transport models.
+**Import them via:** `from Two_Point_Model_Solver import [SolverName]`
 
 *   **`TTPM`**: Analytical solutions of Stangeby's Tokamak Two-Point model [1]. 
     *   **Inputs**: `n_upst` **[m⁻³]**, `Lc` **[m]**, `x` **[m²/s]**, `q_SOL` **[MW/m²]**

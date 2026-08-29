@@ -7,16 +7,9 @@ Specifically, the edge plasma transport is modeled through the 0D Two-Point mode
 ## **REPOSITORY STRUCTURE**
 **The project is organized as follows:**
 
-- **'**Divertor_Subdivertor_Solver.py**':** Contains analytical, conductance, and Dirk solvers for the divertor and subdivertor.
-- **'**Post_Processing.py**':** This script combines the aforementioned two (Two_Point_Model_Solver.py & Divertor_Subdivertor_Solver.py) and provides a parametric post processing script that solves the problem from the upstream to the subdivertor.
-- **'**Subdivertor_Models_Comparison.py**':** This script uses some analytical expressions that estimate the subdivertor pressure (NOT the divertor one though) and compares them with experimental measurements provided in [Haak's paper].
-- **'**Parallel_vs_Perpendicular_Conduction.py**':** This script compares the heat conduction terms of parallel and perpendicular (to the magnetic field lines) directions.
-- **'**Fitted_Closed_Form_nt.py**':** This script tries to find a closed form expression for the target particle density given by the Extended Stellarator Two-Point model.
-- **'**Bayesian_MAP_and_MCMC_Solver.py**':** This script solves a toy-problem of free-parameter estimation using a simplified analytical Tokamak model and pseudo-data.
-
 ## 1) Two_Point_Model_Solver.py
 
-This script containts solvers for 3 different simplfied 0D edge plasma transport model. Select the desired solver and import it as `from Two_Point_Model_Solver import (...Solvers name...)`
+This script contains solvers for three different simplified 0D edge plasma transport model. Select the desired solver and import it as `from Two_Point_Model_Solver import (...Solvers name...)`
 
 ### TTPM
 Uses the analytical solutions of the Stangeby's Tokamak Two-Point model, derived in [1]. 
@@ -31,7 +24,7 @@ Solves the Tokamak Two-Point model of Stangeby numerically
 * **Outputs:** same as above
 
 ### Extended_STPM
-Solves the Extended Stellarator Two-Point model, inroduced by Feng, numerically. It containes 3 loss parameters that account for the neglected physics.
+Solves the Extended Stellarator Two-Point model [2], introduced by Feng, numerically. It contains three loss parameters that account for the neglected physics.
 
 * **Inputs:** upstream plasma density (n_upst [m^-3]), Momentum loss factor (loss_alpha [eV^1/2]), Cooling losses (loss_fcool [-]), Convection fraction (loss_fconv [-]) connection length (Lc [m]), perpendicular diffusion term (x [m^2/s), Theta pitch (theta [-]), and parallel heat flux on the SOL (q_SOL [MW/m^2)
 * **Outputs:** same as above
@@ -164,6 +157,7 @@ This repository contains the codes that supported my Master's thesis: "Simplifie
 
 ## **REFERENCES**
 - [1]: https://www.routledge.com/The-Plasma-Boundary-of-Magnetic-Fusion-Devices/Stangeby/p/book/9780750305594
+- [2]: https://iopscience.iop.org/article/10.1088/1741-4326/ae855c
 
 ## **AUTHOR**
 **[Your Name], Email: [Your Email]**

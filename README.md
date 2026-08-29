@@ -6,7 +6,7 @@ Specifically, the edge plasma transport is modeled through the 0D Two-Point mode
 
 ## **REPOSITORY STRUCTURE**
 **The project is organized as follows:**
-- **'**Two_Point_Model_Solver.py**':** Contains solvers for 3 different simplified 0D edge plasma transport models.
+
 - **'**Divertor_Subdivertor_Solver.py**':** Contains analytical, conductance, and Dirk solvers for the divertor and subdivertor.
 - **'**Post_Processing.py**':** This script combines the aforementioned two (Two_Point_Model_Solver.py & Divertor_Subdivertor_Solver.py) and provides a parametric post processing script that solves the problem from the upstream to the subdivertor.
 - **'**Subdivertor_Models_Comparison.py**':** This script uses some analytical expressions that estimate the subdivertor pressure (NOT the divertor one though) and compares them with experimental measurements provided in [Haak's paper].
@@ -163,7 +163,7 @@ This repository contains the codes that supported my Master's thesis: "Simplifie
 - **[Provide any additional notes here]**
 
 ## **REFERENCES**
-- [1]: Stangeby
+- [1]: https://www.routledge.com/The-Plasma-Boundary-of-Magnetic-Fusion-Devices/Stangeby/p/book/9780750305594
 
 ## **AUTHOR**
 **[Your Name], Email: [Your Email]**

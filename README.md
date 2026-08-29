@@ -9,7 +9,7 @@ Specifically, the edge plasma transport is modeled through the 0D Two-Point mode
 **The project is organized as follows:**
 
 
-** 1) Two_Point_Model_Solver.py **
+## 1) Two_Point_Model_Solver.py*
 
 This script contains solvers for three different simplified 0D edge plasma transport models. Select the desired solver and import it as `from Two_Point_Model_Solver import (...Solvers name...)`
 

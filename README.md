@@ -9,7 +9,7 @@ Specifically, the edge plasma transport is modeled through the 0D Two-Point mode
 **The project is organized as follows:**
 
 
-## 1) Two_Point_Model_Solver.py*
+## 1) Two_Point_Model_Solver.py
 
 This script contains solvers for three different simplified 0D edge plasma transport models. Select the desired solver and import it as `from Two_Point_Model_Solver import (...Solvers name...)`
 
@@ -123,13 +123,11 @@ This script solves a toy-problem of free-parameter estimation using a simplified
 - The Post_Processing.py script is used to solve the upstream to subdivertor flow, given ONLY the upstream conditions
 - Models solely for the subdivertor are contained in the Subdivertor_Models_Comparison.py. They may be used only if the particle flow (N_in) that passes the pumping gaps is known
 
-## **NOTES**
-- **[Provide any additional notes here]**
 
 ## **REFERENCES**
 - [1]: https://www.routledge.com/The-Plasma-Boundary-of-Magnetic-Fusion-Devices/Stangeby/p/book/9780750305594
 - [2]: https://iopscience.iop.org/article/10.1088/1741-4326/ae855c
 
 ## **AUTHOR**
-**[Your Name], Email: [Your Email]**
+**Antonis Adamopoulos, Email: antonis.adamopoulos2003@gmail.com  or  aadamopoulos@ethz.ch**
 

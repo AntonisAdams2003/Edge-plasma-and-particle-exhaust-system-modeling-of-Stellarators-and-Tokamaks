@@ -19,7 +19,7 @@ Specifically, the edge plasma transport is modeled through the 0D Two-Point mode
 This script containts solvers for 3 different simplfied 0D edge plasma transport model. Select the desired solver and import it as `from Two_Point_Model_Solver import (...Solvers name...)`
 
 ### TTPM
-Solves the Tokamak Two-Point model, introduced by Stangeby, using the Stangeby's approximation to derive closed-form solution. 
+Uses the analytical solutions of the Stangeby's Tokamak Two-Point model, derived in [1]. 
 
 * **Inputs:** upstream plasma density (n_upst [m^-3]), connection length (Lc [m]), perpendicular  diffusion term (x [m^2/s), and parallel heat flux on the SOL (q_SOL [MW/m^2)
 * **Outputs:** target particle density (n_targ [m^-3]), upstream plasma temperature (T_upst [eV]), target plasma temperature (T_targ [eV])
@@ -162,5 +162,9 @@ This repository contains the codes that supported my Master's thesis: "Simplifie
 ## **NOTES**
 - **[Provide any additional notes here]**
 
+## **REFERENCES**
+- [1]: Stangeby
+
 ## **AUTHOR**
 **[Your Name], Email: [Your Email]**
+

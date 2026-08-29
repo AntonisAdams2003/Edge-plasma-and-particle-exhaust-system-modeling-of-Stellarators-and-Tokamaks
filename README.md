@@ -1,6 +1,18 @@
-# Repository Scripts Overview
+# Edge-plasma-and-particle-exhaust-system-modeling-of-Stellarators-and-Tokamaks
 
-These codes contain solvers and models for edge plasma physics and neutral gas exhaust.
+## **OVERVIEW**
+This repository contains the codes that supported my Master's thesis: "Simplified Modeling of the Edge Plasma Physics and Neutral Gas Exhaust in the Thermonuclear Reactor Wendelstein 7-X". These scripts contain solvers and models for the analysis of the edge plasma physics and neutral gas exhaust system of Stellarator and Tokamak reactors.
+Specifically, the edge plasma transport is modeled through the 0D Two-Point model (where extended parameters are considered) while the neutral gas transport in the divertor module is modeled with particle balance or conductance models.
+
+## **REPOSITORY STRUCTURE**
+**The project is organized as follows:**
+- **'**Two_Point_Model_Solver.py**':** Contains solvers for 3 different simplified 0D edge plasma transport models.
+- **'**Divertor_Subdivertor_Solver.py**':** Contains analytical, conductance, and Dirk solvers for the divertor and subdivertor.
+- **'**Post_Processing.py**':** This script combines the aforementioned two (Two_Point_Model_Solver.py & Divertor_Subdivertor_Solver.py) and provides a parametric post processing script that solves the problem from the upstream to the subdivertor.
+- **'**Subdivertor_Models_Comparison.py**':** This script uses some analytical expressions that estimate the subdivertor pressure (NOT the divertor one though) and compares them with experimental measurements provided in [Haak's paper].
+- **'**Parallel_vs_Perpendicular_Conduction.py**':** This script compares the heat conduction terms of parallel and perpendicular (to the magnetic field lines) directions.
+- **'**Fitted_Closed_Form_nt.py**':** This script tries to find a closed form expression for the target particle density given by the Extended Stellarator Two-Point model.
+- **'**Bayesian_MAP_and_MCMC_Solver.py**':** This script solves a toy-problem of free-parameter estimation using a simplified analytical Tokamak model and pseudo-data.
 
 ## 1) Two_Point_Model_Solver.py
 

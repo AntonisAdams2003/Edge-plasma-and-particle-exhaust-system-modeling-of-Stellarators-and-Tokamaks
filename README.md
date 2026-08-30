@@ -85,7 +85,7 @@ Fits numerical results of the Extended Stellarator Two-Point model to a logarith
 
 
 #### `Bayesian_MAP_and_MCMC_Solver.py`
-Solves a toy-problem of parameter estimation, using a simplified analytical Tokamak model and pseudo-data. Executes Maximum A Posteriori (MAP) estimation and Markov Chain Monte Carlo (MCMC) algorithm to estimate the posterior distribution under strong vs. weak priors.
+Solves a toy-problem of parameter estimation (MAP), using a simplified analytical Tokamak model and pseudo-data. Additionally, uses Markov Chain Monte Carlo (MCMC) to estimate the posterior distribution under strong vs. weak priors.
 
 
 

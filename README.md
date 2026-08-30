@@ -13,6 +13,7 @@ The scripts are written in python and require the installation of the following 
 - `matplotlib`
 - `math`
 - `sys`
+- `PyQt5`
 - `os` (only for Bayesian_MAP script)
 - `emcee` (only for Bayesian_MAP script)
 

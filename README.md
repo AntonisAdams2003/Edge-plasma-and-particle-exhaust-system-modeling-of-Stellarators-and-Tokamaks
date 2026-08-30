@@ -79,7 +79,7 @@ Fits numerical results of the Extended Stellarator Two-Point model to a logarith
 *   **Inputs**: None
 *   **Outputs**: Regression weights, **comparison figure**.
 
-> ⚠️ **CAUTION:** This expression is strictly for providing initial guesses to a numerical solver. Do not use it to estimate target density directly (exponentiating the logarithmic fit produces significant errors).
+**CAUTION:** This expression is strictly for providing initial guesses to a numerical solver. Do not use it to estimate target density directly (exponentiating the logarithmic fit produces significant errors).
 
 
 

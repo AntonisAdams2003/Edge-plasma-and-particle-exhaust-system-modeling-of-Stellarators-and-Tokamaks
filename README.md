@@ -6,9 +6,15 @@ This repository contains the source code supporting my Master's thesis: *"Simpli
 Specifically, it models edge plasma transport using an extended 0D Two-Point model, and neutral gas transport in the divertor module via particle balance and conductance models.
 
 ## **Prerequisites**
-**The scripts are written in python and require the installation of the following libraries:**
+The scripts are written in python and require the installation of the following libraries:
 - `numpy`
 - `pandas`
+- `scipy`
+- `matplotlib`
+- `math`
+- `sys`
+- `os` (only for Bayesian_MAP script)
+- `emcee` (only for Bayesian_MAP script)
 
 ---
 

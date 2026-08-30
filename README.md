@@ -25,12 +25,12 @@ Contains solvers for three simplified 0D edge plasma transport models.
 Import them via: `from Two_Point_Model_Solver import [SolverName]`
 
 *   **`TTPM`**: Analytical solutions of Stangeby's Tokamak Two-Point model [1]. 
-    *   **Inputs**: `n_upst` **[m⁻³]**, `Lc` **[m]**, `x` **[m²/s]**, `q_SOL` **[MW/m²]**
-    *   **Outputs**: `n_targ` **[m⁻³]**, `T_upst` **[eV]**, `T_targ` **[eV]**
+    *   **Inputs**: `n_upst` [m⁻³], `Lc` [m], `x` [m²/s], `q_SOL` [MW/m²]
+    *   **Outputs**: `n_targ` [m⁻³], `T_upst` [eV], `T_targ` [eV]
 *   **`TTPM_numerical`**: Numerical solver for Stangeby's model.
     *   **Inputs / Outputs**: Same as `TTPM`.
 *   **`Extended_STPM`**: Numerical solver for Feng's Extended Stellarator Two-Point model [2] incorporating three loss parameters.
-    *   **Inputs**: `n_upst`, `loss_alpha` **[eV^(1/2)]**, `loss_fcool` **[-]**, `loss_fconv` **[-]**, `Lc`, `x`, `theta` **[-]**, `q_SOL`
+    *   **Inputs**: `n_upst`, `loss_alpha` [eV^(1/2)], `loss_fcool` [-], `loss_fconv` [-], `Lc`, `x`, `theta` [-], `q_SOL`
     *   **Outputs**: Same as `TTPM`.
 
 

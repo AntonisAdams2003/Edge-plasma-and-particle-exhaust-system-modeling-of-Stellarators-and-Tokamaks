@@ -80,19 +80,17 @@ Compares the parallel and perpendicular heat conduction terms of the heat equati
 
 
 
-#### `Fitted_Closed_Form_nt.py`
-Fits numerical results of the Extended Stellarator Two-Point model to a logarithmic function to approximate target particle density: `log(nt) = g(nu, loss_alpha, loss_fcool, loss_fconv)`.
-*   **Inputs**: None
-*   **Outputs**: Regression weights, **comparison figure**.
-
-**CAUTION:** This expression is strictly for providing initial guesses to a numerical solver. Do not use it to estimate target density directly (exponentiating the logarithmic fit produces significant errors).
-
-
-
-
 #### `Bayesian_MAP_and_MCMC_Solver.py`
 Solves a toy-problem of parameter estimation (MAP), using a simplified analytical Tokamak model and pseudo-data. Additionally, uses Markov Chain Monte Carlo (MCMC) to estimate the posterior distribution under strong vs. weak priors.
 
+## Filler codes
+
+#### `Fitted_Closed_Form_nt.py`
+Fits numerical results of the Extended Stellarator Two-Point model to a logarithmic function to approximate target particle density: `log(nt) = g(nu, loss_alpha, loss_fcool, loss_fconv)`.
+*   **Inputs**: None
+*   **Outputs**: Regression weights, comparison figure.
+
+**CAUTION:** This expression is strictly for providing initial guesses to a numerical solver. Do not use it to estimate target density directly (exponentiating the logarithmic fit produces significant errors).
 
 
 ---

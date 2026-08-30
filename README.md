@@ -72,6 +72,12 @@ Compares analytical expressions estimating subdivertor pressure (NOT divertor pr
 
 
 
+#### `Parallel_vs_Perpendicular_Conduction.py`
+Compares the parallel and perpendicular heat conduction terms of the heat equation. Outputs a figure showing curves where `q_parallel_conduction = q_perpendicular_conduction` for Tokamaks/Stellarators and electrons/ions.
+*   **Inputs**: None
+*   **Outputs**: Figure of equilibrium curves.
+
+
 
 
 #### `Fitted_Closed_Form_nt.py`
@@ -88,13 +94,6 @@ Fits numerical results of the Extended Stellarator Two-Point model to a logarith
 Solves a toy-problem of parameter estimation (MAP), using a simplified analytical Tokamak model and pseudo-data. Additionally, uses Markov Chain Monte Carlo (MCMC) to estimate the posterior distribution under strong vs. weak priors.
 
 
-
-
-
-#### `Parallel_vs_Perpendicular_Conduction.py`
-Compares parallel and perpendicular heat conduction terms. Outputs a figure showing curves where `q_parallel_conduction = q_perpendicular_conduction` for Tokamaks/Stellarators and electrons/ions.
-*   **Inputs**: None
-*   **Outputs**: **Figure of equilibrium curves**.
 
 ---
 

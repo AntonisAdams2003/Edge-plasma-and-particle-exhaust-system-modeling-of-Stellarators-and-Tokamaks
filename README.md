@@ -98,14 +98,14 @@ Fits numerical results of the Extended Stellarator Two-Point model to a logarith
 
 ## **Usage Guidelines**
 **Follow these rules to reproduce the analysis:**
-- **Do not execute `Two_Point_Model_Solver.py` or `Divertor_Subdivertor_Solver.py` directly; they are module libraries meant to be imported.**
-- **Use `Post_Processing.py` to evaluate the upstream-to-subdivertor flow using ONLY upstream conditions.**
-- **Use the isolated subdivertor models in `Subdivertor_Models_Comparison.py` ONLY when the particle flow (`N_in`) through the pumping gaps is predefined.**
+- Do not execute `Two_Point_Model_Solver.py` or `Divertor_Subdivertor_Solver.py` directly; they are module libraries meant to be imported.
+- Use `Post_Processing.py` to evaluate the upstream-to-subdivertor flow using only upstream conditions.
+- Use the isolated subdivertor models in `Subdivertor_Models_Comparison.py` ONLY when the particle flow (`N_in`) through the pumping gaps is given.
 
 
 ## **References**
-1. **[Stangeby, P.C. - The Plasma Boundary of Magnetic Fusion Devices]**(https://www.routledge.com/The-Plasma-Boundary-of-Magnetic-Fusion-Devices/Stangeby/p/book/9780750305594)
-2. **[N. Maaziz et al 2026 Nucl. Fusion 66 086037]**(https://iopscience.iop.org/article/10.1088/1741-4326/ae855c)
+1. **[Stangeby, P.C. - The Plasma Boundary of Magnetic Fusion Devices]** (https://www.routledge.com/The-Plasma-Boundary-of-Magnetic-Fusion-Devices/Stangeby/p/book/9780750305594)
+2. **[N. Maaziz et al 2026 Nucl. Fusion 66 086037]** (https://iopscience.iop.org/article/10.1088/1741-4326/ae855c)
 
 ## **Author**
 **Antonis Adamopoulos**

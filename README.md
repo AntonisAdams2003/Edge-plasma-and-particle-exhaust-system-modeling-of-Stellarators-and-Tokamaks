@@ -59,13 +59,14 @@ Integrates the two core modules above. Provides a parametric post-processing scr
 
 
 #### `Subdivertor_Models_Comparison.py`
-Compares analytical expressions estimating subdivertor pressure (NOT divertor pressure) against experimental measurements **[Haak's paper] and previous models [Varoutis 2024, Fig 11]. Import via:** `from Subdivertor_Models_Comparison import [ModelName]`
+Compares closed-form expressions estimating subdivertor pressure (NOT divertor pressure) against experimental measurements [3]. Moreover, it provides bar plots for two of the models, to compare them with high-fidelity code results from [4]. 
+Import via:** `from Subdivertor_Models_Comparison import [ModelName]`
 
-*   **`Varoutis_subdivertor`**: Regression expressions from **[Varoutis 2025]**.
+*   **`Varoutis_subdivertor`**: Regression expressions from [5].
     *   **Inputs**: `N_in_AEH`, `N_in_AEP` | **Outputs**: `p_sub_AEH`, `p_sub_AEP`
 *   **`Dirk_subdivertor`**: **[Description needed]**
     *   **Inputs**: `N_in_AEH`, `N_in_AEP` | **Outputs**: `p_sub_AEH`, `p_sub_AEP`, `h_AEH`, `h_AEP`, `w_AEH`, `w_AEP`
-*   **`Litovoli_Haak_subdivertor`**: 2-reservoir conductance model from **[Haak-Litovoli]**.
+*   **`Litovoli_Haak_subdivertor`**: 2-reservoir conductance model from **[]**.
     *   **Inputs**: `N_in_AEH`, `N_in_AEP` | **Outputs**: `p_sub_X`, `N_out_in_X`, `N_leak_in_X`, `N_pump_in_X` **(where X = AEH/AEP)**
 *   **`ParticleBalance_subdivertor`**: Particle balance model **introduced in this thesis**.
     *   **Inputs / Outputs: Same as `Litovoli_Haak_subdivertor`.**
@@ -105,7 +106,10 @@ Fits numerical results of the Extended Stellarator Two-Point model to a logarith
 
 ## **References**
 1. **[Stangeby, P.C. - The Plasma Boundary of Magnetic Fusion Devices]** (https://www.routledge.com/The-Plasma-Boundary-of-Magnetic-Fusion-Devices/Stangeby/p/book/9780750305594)
-2. **[N. Maaziz et al 2026 Nucl. Fusion 66 086037]** (https://iopscience.iop.org/article/10.1088/1741-4326/ae855c)
+2. **[N. Maaziz et al 2026 Nucl. Fusion]** (https://iopscience.iop.org/article/10.1088/1741-4326/ae855c)
+3. **[V Haak et al 2023 Plasma Phys. Control. Fusion]** (https://iopscience.iop.org/article/10.1088/1361-6587/acc8fb/meta)
+4. **[S. Varoutis et al 2024 Nucl. Fusion]** (https://iopscience.iop.org/article/10.1088/1741-4326/ad49b5)
+5. **[S. Varoutis et al 2025 Nucl. Fusion]** (https://iopscience.iop.org/article/10.1088/1741-4326/addbf1/meta)
 
 ## **Author**
 **Antonis Adamopoulos**

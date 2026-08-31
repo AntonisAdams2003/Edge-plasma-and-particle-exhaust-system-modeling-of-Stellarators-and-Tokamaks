@@ -1,7 +1,7 @@
 # **Edge Plasma and Particle Exhaust System Modeling of Stellarators and Tokamaks**
 
 ## **Overview**
-This repository contains the source code supporting my Master thesis: *"Simplified Modeling of the Edge Plasma Physics and Neutral Gas Exhaust in the Thermonuclear Reactor Wendelstein 7-X"*. 
+This repository contains the source code supporting my Master's thesis: *"Simplified Modeling of the Edge Plasma Physics and Neutral Gas Exhaust in the Thermonuclear Reactor Wendelstein 7-X"*. 
 
 Specifically, it models edge plasma transport using an extended 0D Two-Point model, and neutral gas transport in the divertor module via particle balance and conductance models.
 
@@ -31,7 +31,7 @@ The scripts are written in Python 3 and require the installation of the followin
 - `scipy`
 - `matplotlib`
 - `PyQt5`
-- `emcee` (only for Bayesian_MAP script)
+- `emcee` (only for the Bayesian_MAP script)
 
 Install them in bash via: `pip install [LibraryName]`
 
@@ -65,7 +65,7 @@ Import them via: `from Two_Point_Model_Solver import [SolverName]`
 ### 📄 `Divertor_Subdivertor_Solver.py`
 Provides analytical models that connect the outputs of the Two-Point model (target conditions) directly to the divertor and subdivertor pressure.
 
-*   **`Divertor_Subdivertor_Analytical`**: Expression pipeline that is presented in thesis, using an approximate equation to connect the plasma with the neutral gas.  
+*   **`Divertor_Subdivertor_Analytical`**: Expression pipeline presented in the thesis, using an approximate equation to connect the plasma with the neutral gas.  
     *   **Inputs:** `n_targ`, `T_targ`, `theta`
     *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
 
@@ -75,7 +75,7 @@ Provides analytical models that connect the outputs of the Two-Point model (targ
 > - Recycling coefficient: `R`
 
 
-*   **`Divertor_Subdivertor_Dirk`**: Uses the Dirk's IPP presentation expression about divertor and subdivertor pressures, after assuming that 95% of the incoming plasma particles return to the core.
+*   **`Divertor_Subdivertor_Dirk`**: Uses the expression from Dirk's IPP presentation about divertor and subdivertor pressures, after assuming that 95% of the incoming plasma particles return to the core.
     *   **Inputs:** `n_targ`, `T_targ`
     *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
 
@@ -88,7 +88,7 @@ Provides analytical models that connect the outputs of the Two-Point model (targ
 
 
 ### 📄 `Post_Processing.py`
-Integrates the two core modules above and provides a parametric post-processing script that solves the problem from the upstream SOL to the subdivertor, for Tokamaks and Stellarators. Finally, it compares the resulting predictions with the experimental measurements [3].
+Integrates the two core modules above and provides a parametric post-processing script that solves the problem from the upstream SOL to the subdivertor for Tokamaks and Stellarators. Finally, it compares the resulting predictions against experimental measurements [3].
 
 
 *   **Inputs**: Choose the desired Divertor-Subdivertor model
@@ -98,7 +98,7 @@ Integrates the two core modules above and provides a parametric post-processing 
 
 
 ### 📄 `Subdivertor_Models_Comparison.py`
-Compares closed-form expressions estimating subdivertor pressure (NOT divertor pressure) against experimental measurements [3]. Moreover, it compares the outflux fractions for two of the models, with high-fidelity code results from [4]. 
+Compares closed-form expressions estimating subdivertor pressure (not divertor pressure) against experimental measurements [3]. Moreover, it compares the outflux fractions for two of the models with high-fidelity code results from [4]. 
 Import via:`from Subdivertor_Models_Comparison import [ModelName]`
 
 *   **`Varoutis_subdivertor`**: Regression expressions from [5].
@@ -129,28 +129,14 @@ Compares the parallel and perpendicular heat conduction terms of the heat equati
 
 
 ### 📄 `Bayesian_MAP_and_MCMC_Solver.py`
-Solves a toy-problem of parameter estimation (MAP), using a simplified analytical Tokamak model and pseudo-data. Additionally, uses Markov Chain Monte Carlo (MCMC) to estimate the posterior distribution under strong vs. weak priors.
-
----
-
-## Auxiliary code
-
-
-### 📄 `Fitted_Closed_Form_nt.py`
-Fits numerical results of the Extended Stellarator Two-Point model to a logarithmic function to approximate target particle density: `log(nt) = g(nu, loss_alpha, loss_fcool, loss_fconv)`.
-
-*   **Inputs**: None
-*   **Outputs**: Regression weights, comparison figure.
-
-> **CAUTION:** This expression is strictly for providing initial guesses to a numerical solver. Do not use it to estimate target density directly (exponentiating the logarithmic fit produces significant errors).
-
+Solves a toy problem of parameter estimation (MAP), using a simplified analytical Tokamak model and pseudo-data. Additionally, uses Markov Chain Monte Carlo (MCMC) to estimate the posterior distribution under strong vs. weak priors.
 
 
 ---
 
 
 ## **Usage Guidelines**
-**Follow these rules to reproduce the analysis:**
+Follow these rules to reproduce the analysis:
 - Do not execute `Two_Point_Model_Solver.py` or `Divertor_Subdivertor_Solver.py` directly; they are module libraries meant to be imported.
 - Use `Post_Processing.py` to evaluate the upstream-to-subdivertor flow using only upstream conditions.
 - Use the isolated subdivertor models in `Subdivertor_Models_Comparison.py` ONLY when the particle flow (`N_in`) through the pumping gaps is given.

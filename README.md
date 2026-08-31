@@ -51,9 +51,9 @@ Import them via: `from Two_Point_Model_Solver import [SolverName]`
 
 
 #### `Post_Processing.py`
-Integrates the two core modules above. Provides a parametric post-processing script that solves the problem from the upstream to the subdivertor.
-*   **Inputs:** 
-*   **Outputs:** 
+Integrates the two core modules above and provides a parametric post-processing script that solves the problem from the upstream SOL to the subdivertor, for Tokamaks and Stellarators.
+*   **Inputs:** Choose the desired Divertor-Subdivertor model
+*   **Outputs:** Figures of some parameters of interest with respect to the upstream density
 
 
 

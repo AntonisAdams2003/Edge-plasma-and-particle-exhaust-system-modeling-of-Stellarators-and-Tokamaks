@@ -14,7 +14,7 @@ A brief definition of the variables used:
 * `Lc`: Connection length [m]
 * `x`: Cross-field transport coefficient [m²/s]
 * `q_SOL`: Scrape-Off Layer parallel heat flux [MW/m²]
-* `loss_alpha`: Momentum loss parameter [$eV^{1/2}$]
+* `loss_alpha`: Momentum loss parameter [eV½]
 * `loss_fcool`: Cooling loss fraction [-]
 * `loss_fconv`: Convective loss fraction [-]
 * `theta`: Magnetic pitch angle [-]

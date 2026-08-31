@@ -60,7 +60,7 @@ Integrates the two core modules above. Provides a parametric post-processing scr
 
 #### `Subdivertor_Models_Comparison.py`
 Compares closed-form expressions estimating subdivertor pressure (NOT divertor pressure) against experimental measurements [3]. Moreover, it provides bar plots for two of the models, to compare them with high-fidelity code results from [4]. 
-Import via:** `from Subdivertor_Models_Comparison import [ModelName]`
+Import via:`from Subdivertor_Models_Comparison import [ModelName]`
 
 *   **`Varoutis_subdivertor`**: Regression expressions from [5].
     *   **Inputs**: `N_in_AEH`, `N_in_AEP`

@@ -34,9 +34,12 @@ The scripts are written in Python 3 and require the installation of the followin
 
 Install them in bash via: `pip install [LibraryName]`
 
+
 ---
 
+
 ## **Repository Structure**
+
 
 #### `Two_Point_Model_Solver.py`
 Contains solvers for three simplified 0D edge plasma transport models.
@@ -45,25 +48,33 @@ Import them via: `from Two_Point_Model_Solver import [SolverName]`
 *   **`TTPM`**: Analytical solutions of Stangeby's Tokamak Two-Point model [1]. 
     *   **Inputs**: `n_upst`, `Lc`, `x`, `q_SOL`
     *   **Outputs**: `n_targ`, `T_upst`, `T_targ`
-*   **`TTPM_numerical`**: Numerical solver for Stangeby's model.
-    *   **Inputs / Outputs**: Same as `TTPM`.
-*   **`Extended_STPM`**: Numerical solver for Feng's Extended Stellarator Two-Point model [2] incorporating three loss parameters.
-    *   **Inputs**: `n_upst`, `loss_alpha` [eV^(1/2)], `loss_fcool` [-], `loss_fconv` [-], `Lc`, `x`, `theta` [-], `q_SOL`
-    *   **Outputs**: Same as `TTPM`.
 
+*   **`TTPM_numerical`**: Numerical solver for Stangeby's model.
+    *   **Inputs / Outputs**: Same as `TTPM`
+   
+*   **`Extended_STPM`**: Numerical solver for Feng's Extended Stellarator Two-Point model [2] incorporating three loss parameters.
+    *   **Inputs**: `n_upst`, `loss_alpha`, `loss_fcool`, `loss_fconv`, `Lc`, `x`, `theta`, `q_SOL`
+    *   **Outputs**: Same as `TTPM`
 
 
 
 #### `Divertor_Subdivertor_Solver.py`
-**[Description needed]**
+Provides analytical models that connect the outputs of the Two-Point model (target conditions) directly to the divertor and subdivertor pressure.
+
 *   **`Divertor_Subdivertor_Analytical`**
-    *   **Inputs:** | **Outputs:**
+    *   **Inputs:** `n_targ`, `T_targ`, `theta`
+    *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
+
+**Note:** The user may also want to adjust some fixed parameters like: 
+- Particle capture coefficient `epsilon_x`,
+- PSI wetting area `A_wet`
+- Recycling coefficient `R`
+
 *   **`Divertor_Subdivertor_Conductance`**
     *   **Inputs:** | **Outputs:**
+
 *   **`Divertor_Subdivertor_Dirk`**
     *   **Inputs:** | **Outputs:**
-
-
 
 
 
@@ -72,7 +83,6 @@ Integrates the two core modules above and provides a parametric post-processing 
 
 *   **Inputs:** Choose the desired Divertor-Subdivertor model
 *   **Outputs:** Figures of some parameters of interest with respect to the upstream density
-
 
 
 
@@ -89,7 +99,7 @@ Import via:`from Subdivertor_Models_Comparison import [ModelName]`
 
 *   **`Litovoli_Haak_subdivertor`**: 2-reservoir conductance model from [6].
     *   **Inputs**: `N_in_AEH`, `N_in_AEP`
-    *   **Outputs**: `p_sub_X`, `N_out_in_X`, `N_leak_in_X`, `N_pump_in_X` (where X = AEH and AEP)
+    *   **Outputs**: `p_sub_x`, `N_out_in_x`, `N_leak_in_x`, `N_pump_in_x` (where x = AEH and AEP)
  
 *   **`ParticleBalance_subdivertor`**: Particle balance model introduced in this thesis.
     *   **Inputs / Outputs**: Same as `Litovoli_Haak_subdivertor`
@@ -108,7 +118,11 @@ Compares the parallel and perpendicular heat conduction terms of the heat equati
 #### `Bayesian_MAP_and_MCMC_Solver.py`
 Solves a toy-problem of parameter estimation (MAP), using a simplified analytical Tokamak model and pseudo-data. Additionally, uses Markov Chain Monte Carlo (MCMC) to estimate the posterior distribution under strong vs. weak priors.
 
-## Filler codes
+
+---
+
+## Auxiliary code
+
 
 #### `Fitted_Closed_Form_nt.py`
 Fits numerical results of the Extended Stellarator Two-Point model to a logarithmic function to approximate target particle density: `log(nt) = g(nu, loss_alpha, loss_fcool, loss_fconv)`.
@@ -129,6 +143,9 @@ Fits numerical results of the Extended Stellarator Two-Point model to a logarith
 - Use the isolated subdivertor models in `Subdivertor_Models_Comparison.py` ONLY when the particle flow (`N_in`) through the pumping gaps is given.
 
 
+---
+
+
 ## **References**
 1. **[Stangeby, P.C. - The Plasma Boundary of Magnetic Fusion Devices]** (https://www.routledge.com/The-Plasma-Boundary-of-Magnetic-Fusion-Devices/Stangeby/p/book/9780750305594)
 2. **[N. Maaziz et al 2026 Nucl. Fusion]** (https://iopscience.iop.org/article/10.1088/1741-4326/ae855c)
@@ -136,6 +153,10 @@ Fits numerical results of the Extended Stellarator Two-Point model to a logarith
 4. **[S. Varoutis et al 2024 Nucl. Fusion]** (https://iopscience.iop.org/article/10.1088/1741-4326/ad49b5)
 5. **[S. Varoutis et al 2025 Nucl. Fusion]** (https://iopscience.iop.org/article/10.1088/1741-4326/addbf1/meta)
 6. **[Litovoli et al 2026 Computation]** (https://www.researchgate.net/publication/399891339_Development_and_Assessment_of_Simplified_Conductance_Models_for_the_Particle_Exhaust_in_Wendelstein_7-X)
+
+
+---
+
 
 ## **Author**
 **Antonis Adamopoulos**

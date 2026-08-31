@@ -71,7 +71,7 @@ Import via:`from Subdivertor_Models_Comparison import [ModelName]`
 
 *   **`Litovoli_Haak_subdivertor`**: 2-reservoir conductance model from [6].
     *   **Inputs**: `N_in_AEH`, `N_in_AEP`
-    *   **Outputs**: `p_sub_X`, `N_out_in_X`, `N_leak_in_X`, `N_pump_in_X` **(where X = AEH and AEP)**
+    *   **Outputs**: `p_sub_X`, `N_out_in_X`, `N_leak_in_X`, `N_pump_in_X` (where X = AEH and AEP)
  
 *   **`ParticleBalance_subdivertor`**: Particle balance model introduced in this thesis.
     *   **Inputs / Outputs**: Same as `Litovoli_Haak_subdivertor`

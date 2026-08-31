@@ -38,7 +38,7 @@ Install them in bash via: `pip install [LibraryName]`
 ---
 
 
-``mermaid
+```mermaid
 graph TD
     In1[N_in] --> Model1(Script: Divertor_Models_Comparison.py)
     Model1 --> Out1[p_sub]

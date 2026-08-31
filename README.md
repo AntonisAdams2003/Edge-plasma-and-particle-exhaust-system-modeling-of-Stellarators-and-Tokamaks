@@ -40,53 +40,56 @@ Install them in bash via: `pip install [LibraryName]`
 
 ## **Repository Structure**
 
+
  
 ### 📄 `Two_Point_Model_Solver.py`
 Contains solvers for three simplified 0D edge plasma transport models.
 Import them via: `from Two_Point_Model_Solver import [SolverName]`
 
-*   **`TTPM`**: Analytical solutions of Stangeby's Tokamak Two-Point model [1]. 
-    *   **Inputs**: `n_upst`, `Lc`, `x`, `q_SOL`
-    *   **Outputs**: `n_targ`, `T_upst`, `T_targ`
+*   **`TTPM`**: Analytical solutions of Stangeby's Tokamak Two-Point model [1]. 
+    *   **Inputs**: `n_upst`, `Lc`, `x`, `q_SOL`
+    *   **Outputs**: `n_targ`, `T_upst`, `T_targ`
 
-*   **`TTPM_numerical`**: Numerical solver for Stangeby's model.
-    *   **Inputs / Outputs**: Same as `TTPM`
-   
-*   **`Extended_STPM`**: Numerical solver for Feng's Extended Stellarator Two-Point model [2] incorporating three loss parameters.
-    *   **Inputs**: `n_upst`, `loss_alpha`, `loss_fcool`, `loss_fconv`, `Lc`, `x`, `theta`, `q_SOL`
-    *   **Outputs**: Same as `TTPM`
+*   **`TTPM_numerical`**: Numerical solver for Stangeby's model.
+    *   **Inputs / Outputs**: Same as `TTPM`
+   
+*   **`Extended_STPM`**: Numerical solver for Feng's Extended Stellarator Two-Point model [2] incorporating three loss parameters.
+    *   **Inputs**: `n_upst`, `loss_alpha`, `loss_fcool`, `loss_fconv`, `Lc`, `x`, `theta`, `q_SOL`
+    *   **Outputs**: Same as `TTPM`
+
+
 
 
 
 ### 📄 `Divertor_Subdivertor_Solver.py`
 Provides analytical models that connect the outputs of the Two-Point model (target conditions) directly to the divertor and subdivertor pressure.
 
-*   **`Divertor_Subdivertor_Analytical`**
-
-    *   **Inputs:** `n_targ`, `T_targ`, `theta`
-    *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
+*   **`Divertor_Subdivertor_Analytical`**
+    *   **Inputs:** `n_targ`, `T_targ`, `theta`
+    *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
 
 > **Note:** The user may also want to adjust some fixed parameters like: 
 > - Particle capture coefficient: `epsilon_x`,
 > - PSI wetting area: `A_wet`
 > - Recycling coefficient: `R`
 
-*   **`Divertor_Subdivertor_Conductance`**
+
+*   **`Divertor_Subdivertor_Conductance`**
 fkksdfkahfhakd
+    *   **Inputs:** `n_targ`, `T_targ`
+    *   **Outputs:**
 
-    *   **Inputs:** `n_targ`, `T_targ`
-    *   **Outputs:**
-
-
-*   **`Divertor_Subdivertor_Dirk`**
+*   **`Divertor_Subdivertor_Dirk`**
 gdfsgfdsgdfgs
-
-    *   **Inputs:** `n_targ`, `T_targ`
-    *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
+    *   **Inputs:** `n_targ`, `T_targ`
+    *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
 
 > **Note:** The user may also want to adjust the fixed parameters: 
 > - Particle collection efficiency (= `N_in`/`N_targ`): `PCE`,
 > - Particle removal efficiency (= `N_exhaust`/`N_in`): `PRE`
+
+
+
 
 
 ### 📄 `Post_Processing.py`
@@ -97,38 +100,41 @@ Integrates the two core modules above and provides a parametric post-processing 
 
 
 
+
+
 ### 📄 `Subdivertor_Models_Comparison.py`
-Compares closed-form expressions estimating subdivertor pressure (NOT divertor pressure) against experimental measurements [3]. Moreover, it provides bar plots for two of the models, to compare them with high-fidelity code results from [4]. 
+Compares closed-form expressions estimating subdivertor pressure (NOT divertor pressure) against experimental measurements [3]. Moreover, it provides bar plots for two of the models, to compare them with high-fidelity code results from [4]. 
 Import via:`from Subdivertor_Models_Comparison import [ModelName]`
 
-*   **`Varoutis_subdivertor`**: Regression expressions from [5].
-    *   **Inputs**: `N_in_AEH`, `N_in_AEP`
-    *   **Outputs**: `p_sub_AEH`, `p_sub_AEP`
+*   **`Varoutis_subdivertor`**: Regression expressions from [5].
+    *   **Inputs**: `N_in_AEH`, `N_in_AEP`
+    *   **Outputs**: `p_sub_AEH`, `p_sub_AEP`
 
-*   **`Dirk_subdivertor`**: Analytical expression from Dirk's IPP presentation using conductance balance.
-    *   **Inputs / Outputs**: Same as `Varoutis_subdivertor`
+*   **`Dirk_subdivertor`**: Analytical expression from Dirk's IPP presentation using conductance balance.
+    *   **Inputs / Outputs**: Same as `Varoutis_subdivertor`
 
-*   **`Litovoli_Haak_subdivertor`**: 2-reservoir conductance model from [6].
-    *   **Inputs**: `N_in_AEH`, `N_in_AEP`
-    *   **Outputs**: `p_sub_x`, `N_out_in_x`, `N_leak_in_x`, `N_pump_in_x` (where x = AEH and AEP)
- 
-*   **`ParticleBalance_subdivertor`**: Particle balance model introduced in this thesis.
-    *   **Inputs / Outputs**: Same as `Litovoli_Haak_subdivertor`
+*   **`Litovoli_Haak_subdivertor`**: 2-reservoir conductance model from [6].
+    *   **Inputs**: `N_in_AEH`, `N_in_AEP`
+    *   **Outputs**: `p_sub_x`, `N_out_in_x`, `N_leak_in_x`, `N_pump_in_x` (where x = AEH and AEP)
+ 
+*   **`ParticleBalance_subdivertor`**: Particle balance model introduced in this thesis.
+    *   **Inputs / Outputs**: Same as `Litovoli_Haak_subdivertor`
+
+
 
 
 
 ### 📄 `Parallel_vs_Perpendicular_Conduction.py`
 Compares the parallel and perpendicular heat conduction terms of the heat equation. Outputs a figure showing curves where `q_parallel_conduction = q_perpendicular_conduction` for Tokamaks/Stellarators and electrons/ions.
 
-*   **Inputs**: None
-*   **Outputs**: Figure of equilibrium curves.
+*   **Inputs**: None
+*   **Outputs**: Figure of equilibrium curves.
 
 
 
 
 ### 📄 `Bayesian_MAP_and_MCMC_Solver.py`
 Solves a toy-problem of parameter estimation (MAP), using a simplified analytical Tokamak model and pseudo-data. Additionally, uses Markov Chain Monte Carlo (MCMC) to estimate the posterior distribution under strong vs. weak priors.
-
 
 ---
 
@@ -138,10 +144,11 @@ Solves a toy-problem of parameter estimation (MAP), using a simplified analytica
 ### 📄 `Fitted_Closed_Form_nt.py`
 Fits numerical results of the Extended Stellarator Two-Point model to a logarithmic function to approximate target particle density: `log(nt) = g(nu, loss_alpha, loss_fcool, loss_fconv)`.
 
-*   **Inputs**: None
-*   **Outputs**: Regression weights, comparison figure.
+*   **Inputs**: None
+*   **Outputs**: Regression weights, comparison figure.
 
-> **CAUTION:** This expression is strictly for providing initial guesses to a numerical  solver. Do not use it to estimate target density directly (exponentiating the logarithmic fit produces significant errors).
+> **CAUTION:** This expression is strictly for providing initial guesses to a numerical solver. Do not use it to estimate target density directly (exponentiating the logarithmic fit produces significant errors).
+
 
 
 ---

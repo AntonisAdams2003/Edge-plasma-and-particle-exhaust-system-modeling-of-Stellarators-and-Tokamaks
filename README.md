@@ -14,11 +14,11 @@ A brief definition of the variables used:
 * `Lc`: Connection length [m]
 * `x`: Cross-field transport coefficient [m²/s]
 * `q_SOL`: Scrape-Off Layer parallel heat flux [MW/m²]
-* `loss_alpha`: Momentum loss parameter [eV^(1/2)]
+* `loss_alpha`: Momentum loss parameter [$eV^{1/2}$]
 * `loss_fcool`: Cooling loss fraction [-]
 * `loss_fconv`: Convective loss fraction [-]
 * `theta`: Magnetic pitch angle [-]
-* `N_in_AEH` / `N_in_AEP`: Particle inflow through the AEH/AEP pumping gaps [s^-1]
+* `N_in_AEH` / `N_in_AEP`: Particle inflow through the AEH/AEP pumping gaps [s⁻¹]
 * `p_div`: Divertor pressure [mbar]
 * `p_sub`: Subdivertor pressure [mbar]
 
@@ -32,7 +32,7 @@ The scripts are written in Python 3 and require the installation of the followin
 - `PyQt5`
 - `emcee` (only for Bayesian_MAP script)
 
-Note: Install them in bash via: `pip install [LibraryName]`
+Install them in bash via: `pip install [LibraryName]`
 
 ---
 
@@ -43,8 +43,8 @@ Contains solvers for three simplified 0D edge plasma transport models.
 Import them via: `from Two_Point_Model_Solver import [SolverName]`
 
 *   **`TTPM`**: Analytical solutions of Stangeby's Tokamak Two-Point model [1]. 
-    *   **Inputs**: `n_upst` [m⁻³], `Lc` [m], `x` [m²/s], `q_SOL` [MW/m²]
-    *   **Outputs**: `n_targ` [m⁻³], `T_upst` [eV], `T_targ` [eV]
+    *   **Inputs**: `n_upst`, `Lc`, `x`, `q_SOL`
+    *   **Outputs**: `n_targ`, `T_upst`, `T_targ`
 *   **`TTPM_numerical`**: Numerical solver for Stangeby's model.
     *   **Inputs / Outputs**: Same as `TTPM`.
 *   **`Extended_STPM`**: Numerical solver for Feng's Extended Stellarator Two-Point model [2] incorporating three loss parameters.

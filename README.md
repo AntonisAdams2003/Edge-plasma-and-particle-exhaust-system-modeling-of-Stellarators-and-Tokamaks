@@ -75,7 +75,7 @@ Provides analytical models that connect the outputs of the Two-Point model (targ
 > - Recycling coefficient: `R`
 
 
-*   **`Divertor_Subdivertor_Dirk`**: Uses the expression from Dirk's IPP presentation about divertor and subdivertor pressures, after assuming that 95% of the incoming plasma particles return to the core.
+*   **`Divertor_Subdivertor_Dirk`**: Uses an analytical expression for divertor and subdivertor prssures derived in [7], after assuming that 95% of the incoming plasma particles return to the core.
     *   **Inputs:** `n_targ`, `T_targ`
     *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
 
@@ -105,7 +105,7 @@ Import via:`from Subdivertor_Models_Comparison import [ModelName]`
     *   **Inputs**: `N_in_AEH`, `N_in_AEP`
     *   **Outputs**: `p_sub_AEH`, `p_sub_AEP`
 
-*   **`Dirk_subdivertor`**: Analytical expression from Dirk's IPP presentation using conductance balance.
+*   **`Dirk_subdivertor`**: Analytical expression from [7] using conductance balance.
     *   **Inputs / Outputs**: Same as `Varoutis_subdivertor`
 
 *   **`Litovoli_Haak_subdivertor`**: 2-reservoir conductance model from [6].
@@ -161,6 +161,7 @@ Follow these rules to reproduce the analysis:
 4. **[S. Varoutis et al 2024 Nucl. Fusion]** (https://iopscience.iop.org/article/10.1088/1741-4326/ad49b5)
 5. **[S. Varoutis et al 2025 Nucl. Fusion]** (https://iopscience.iop.org/article/10.1088/1741-4326/addbf1/meta)
 6. **[Litovoli et al 2026 Computation]** (https://www.researchgate.net/publication/399891339_Development_and_Assessment_of_Simplified_Conductance_Models_for_the_Particle_Exhaust_in_Wendelstein_7-X)
+7. **[Dr. Dirk Naujoks IPP presentation]** 
 
 
 ---

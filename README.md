@@ -40,21 +40,6 @@ Install them in bash via: `pip install [LibraryName]`
 
 ## **Repository Structure**
 
-
-#### `Two_Point_Model_Solver.py`
-Contains solvers for three simplified 0D edge plasma transport models.
-Import them via: `from Two_Point_Model_Solver import [SolverName]`
-
-*   **`TTPM`**: Analytical solutions of Stangeby's Tokamak Two-Point model [1]. 
-    *   **Inputs**: `n_upst`, `Lc`, `x`, `q_SOL`
-    *   **Outputs**: `n_targ`, `T_upst`, `T_targ`
-
-*   **`TTPM_numerical`**: Numerical solver for Stangeby's model.
-    *   **Inputs / Outputs**: Same as `TTPM`
-   
-*   **`Extended_STPM`**: Numerical solver for Feng's Extended Stellarator Two-Point model [2] incorporating three loss parameters.
-    *   **Inputs**: `n_upst`, `loss_alpha`, `loss_fcool`, `loss_fconv`, `Lc`, `x`, `theta`, `q_SOL`
-    *   **Outputs**: Same as `TTPM`
  
 ### 📄 `Two_Point_Model_Solver.py`
 Contains solvers for three simplified 0D edge plasma transport models.
@@ -73,7 +58,7 @@ Import them via: `from Two_Point_Model_Solver import [SolverName]`
 
 
 
-#### `Divertor_Subdivertor_Solver.py`
+### 📄 `Divertor_Subdivertor_Solver.py`
 Provides analytical models that connect the outputs of the Two-Point model (target conditions) directly to the divertor and subdivertor pressure.
 
 *   **`Divertor_Subdivertor_Analytical`**
@@ -104,7 +89,7 @@ gdfsgfdsgdfgs
 - Particle removal efficiency (= `N_exhaust`/`N_in`): `PRE`
 
 
-#### `Post_Processing.py`
+### 📄 `Post_Processing.py`
 Integrates the two core modules above and provides a parametric post-processing script that solves the problem from the upstream SOL to the subdivertor, for Tokamaks and Stellarators. Finally, it compares the resulting predictions with the experimental measurements [3].
 
 *   **Inputs:** Choose the desired Divertor-Subdivertor model
@@ -112,7 +97,7 @@ Integrates the two core modules above and provides a parametric post-processing 
 
 
 
-#### `Subdivertor_Models_Comparison.py`
+### 📄 `Subdivertor_Models_Comparison.py`
 Compares closed-form expressions estimating subdivertor pressure (NOT divertor pressure) against experimental measurements [3]. Moreover, it provides bar plots for two of the models, to compare them with high-fidelity code results from [4]. 
 Import via:`from Subdivertor_Models_Comparison import [ModelName]`
 
@@ -132,7 +117,7 @@ Import via:`from Subdivertor_Models_Comparison import [ModelName]`
 
 
 
-#### `Parallel_vs_Perpendicular_Conduction.py`
+### 📄 `Parallel_vs_Perpendicular_Conduction.py`
 Compares the parallel and perpendicular heat conduction terms of the heat equation. Outputs a figure showing curves where `q_parallel_conduction = q_perpendicular_conduction` for Tokamaks/Stellarators and electrons/ions.
 
 *   **Inputs**: None
@@ -141,7 +126,7 @@ Compares the parallel and perpendicular heat conduction terms of the heat equati
 
 
 
-#### `Bayesian_MAP_and_MCMC_Solver.py`
+### 📄 `Bayesian_MAP_and_MCMC_Solver.py`
 Solves a toy-problem of parameter estimation (MAP), using a simplified analytical Tokamak model and pseudo-data. Additionally, uses Markov Chain Monte Carlo (MCMC) to estimate the posterior distribution under strong vs. weak priors.
 
 
@@ -150,7 +135,7 @@ Solves a toy-problem of parameter estimation (MAP), using a simplified analytica
 ## Auxiliary code
 
 
-#### `Fitted_Closed_Form_nt.py`
+### 📄 `Fitted_Closed_Form_nt.py`
 Fits numerical results of the Extended Stellarator Two-Point model to a logarithmic function to approximate target particle density: `log(nt) = g(nu, loss_alpha, loss_fcool, loss_fconv)`.
 
 *   **Inputs**: None

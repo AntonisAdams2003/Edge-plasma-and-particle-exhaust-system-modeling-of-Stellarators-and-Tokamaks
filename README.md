@@ -5,17 +5,34 @@ This repository contains the source code supporting my Master's thesis: *"Simpli
 
 Specifically, it models edge plasma transport using an extended 0D Two-Point model, and neutral gas transport in the divertor module via particle balance and conductance models.
 
+---
+
+## Nomenclature
+*Provide a brief definition for your variables here so users don't have to guess.*
+* `n_upst` / `n_targ`: Upstream / Target plasma density [m⁻³]
+* `T_upst` / `T_targ`: Upstream / Target plasma temperature [eV]
+* `Lc`: Connection length [m]
+* `x`: Cross-field transport coefficient [m²/s]
+* `q_SOL`: Scrape-Off Layer parallel heat flux [MW/m²]
+* `loss_alpha`: Momentum loss parameter [eV^(1/2)]
+* `loss_fcool`: Cooling loss fraction [-]
+* `loss_fconv`: Convective loss fraction [-]
+* `theta`: Magnetic pitch angle [-]
+* `N_in_AEH` / `N_in_AEP`: Particle inflow through the AEH/AEP pumping gaps [s^-1]
+* `p_div`: Divertor pressure [mbar]
+* `p_sub`: Subdivertor pressure [mbar]
+
+
 ## **Prerequisites**
-The scripts are written in python and require the installation of the following libraries:
+The scripts are written in Python 3 and require the installation of the following libraries:
 - `numpy`
 - `pandas`
 - `scipy`
 - `matplotlib`
-- `math`
-- `sys`
 - `PyQt5`
-- `os` (only for Bayesian_MAP script)
 - `emcee` (only for Bayesian_MAP script)
+
+Note: Install them in bash via: `pip install [LibraryName]`
 
 ---
 

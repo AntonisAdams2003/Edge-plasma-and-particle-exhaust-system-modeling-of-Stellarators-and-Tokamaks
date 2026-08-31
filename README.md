@@ -41,7 +41,6 @@ Install them in bash via: `pip install [LibraryName]`
 ## **Repository Structure**
 
 
- 
 ### 📄 `Two_Point_Model_Solver.py`
 Contains solvers for three simplified 0D edge plasma transport models.
 Import them via: `from Two_Point_Model_Solver import [SolverName]`

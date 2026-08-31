@@ -51,7 +51,8 @@ Import them via: `from Two_Point_Model_Solver import [SolverName]`
 
 
 #### `Post_Processing.py`
-Integrates the two core modules above and provides a parametric post-processing script that solves the problem from the upstream SOL to the subdivertor, for Tokamaks and Stellarators.
+Integrates the two core modules above and provides a parametric post-processing script that solves the problem from the upstream SOL to the subdivertor, for Tokamaks and Stellarators. Finally, it compares the resulting predictions with the experimental measurements [3].
+
 *   **Inputs:** Choose the desired Divertor-Subdivertor model
 *   **Outputs:** Figures of some parameters of interest with respect to the upstream density
 
@@ -80,6 +81,7 @@ Import via:`from Subdivertor_Models_Comparison import [ModelName]`
 
 #### `Parallel_vs_Perpendicular_Conduction.py`
 Compares the parallel and perpendicular heat conduction terms of the heat equation. Outputs a figure showing curves where `q_parallel_conduction = q_perpendicular_conduction` for Tokamaks/Stellarators and electrons/ions.
+
 *   **Inputs**: None
 *   **Outputs**: Figure of equilibrium curves.
 
@@ -93,6 +95,7 @@ Solves a toy-problem of parameter estimation (MAP), using a simplified analytica
 
 #### `Fitted_Closed_Form_nt.py`
 Fits numerical results of the Extended Stellarator Two-Point model to a logarithmic function to approximate target particle density: `log(nt) = g(nu, loss_alpha, loss_fcool, loss_fconv)`.
+
 *   **Inputs**: None
 *   **Outputs**: Regression weights, comparison figure.
 

@@ -88,9 +88,9 @@ Provides analytical models that connect the outputs of the Two-Point model (targ
 ### 📄 `Post_Processing.py`
 Integrates the two core modules above and provides a parametric post-processing script that solves the problem from the upstream SOL to the subdivertor, for Tokamaks and Stellarators. Finally, it compares the resulting predictions with the experimental measurements [3].
 
-*   **Inputs:** Choose the desired Divertor-Subdivertor model
-*   **Outputs:** Figures of some parameters of interest with respect to the upstream density
 
+*   **Inputs**: Choose the desired Divertor-Subdivertor model
+*   **Outputs**: Figures of some parameters of interest with respect to the upstream density
 
 
 

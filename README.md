@@ -35,25 +35,6 @@ The scripts are written in Python 3 and require the installation of the followin
 Install them in bash via: `pip install [LibraryName]`
 
 
----
-
-
-```mermaid
-graph TD
-    In1[N_in] --> Model1(Script: Divertor_Models_Comparison.py)
-    Model1 --> Out1[p_sub]
-    Model1 -.-> Model3(Script: Parallel_vs_Perpendicular_Conduction.py)
-
-subgraph Main Flow
-        direction TB
-        Up1[n_u] --> Post(Script: Post_Processing.py)
-        Up2[n_u] --> Solver1(Script: Two_Point_Model_Solver.py)
-        Solver1 --> Targets[n_t, T_u, T_t]
-        Targets --> Solver2(Script: Divertor_Subdivertor_Solver.py)
-        Solver2 --> Subdiv[p_div, p_sub, N_in, Gamma_t]
-    end
-```
-
 
 ---
 

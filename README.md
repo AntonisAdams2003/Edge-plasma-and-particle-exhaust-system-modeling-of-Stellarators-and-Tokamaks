@@ -1,7 +1,7 @@
 # **Edge Plasma and Particle Exhaust System Modeling of Stellarators and Tokamaks**
 
 ## **Overview**
-This repository contains the source code supporting my Master's thesis: *"Simplified Modeling of the Edge Plasma Physics and Neutral Gas Exhaust in the Thermonuclear Reactor Wendelstein 7-X"*. 
+This repository contains the source code supporting my Master thesis: *"Simplified Modeling of the Edge Plasma Physics and Neutral Gas Exhaust in the Thermonuclear Reactor Wendelstein 7-X"*. 
 
 Specifically, it models edge plasma transport using an extended 0D Two-Point model, and neutral gas transport in the divertor module via particle balance and conductance models.
 

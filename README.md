@@ -66,7 +66,7 @@ Import via:`from Subdivertor_Models_Comparison import [ModelName]`
     *   **Inputs**: `N_in_AEH`, `N_in_AEP`
     *   **Outputs**: `p_sub_AEH`, `p_sub_AEP`
 
-*   **`Dirk_subdivertor`**: Analytical expression from Dirk's IPP presentation using conductances
+*   **`Dirk_subdivertor`**: Analytical expression from Dirk's IPP presentation using conductance balance.
     *   **Inputs / Outputs**: Same as `Varoutis_subdivertor`
 
 *   **`Litovoli_Haak_subdivertor`**: 2-reservoir conductance model from [6].

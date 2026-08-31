@@ -115,7 +115,7 @@ Fits numerical results of the Extended Stellarator Two-Point model to a logarith
 3. **[V Haak et al 2023 Plasma Phys. Control. Fusion]** (https://iopscience.iop.org/article/10.1088/1361-6587/acc8fb/meta)
 4. **[S. Varoutis et al 2024 Nucl. Fusion]** (https://iopscience.iop.org/article/10.1088/1741-4326/ad49b5)
 5. **[S. Varoutis et al 2025 Nucl. Fusion]** (https://iopscience.iop.org/article/10.1088/1741-4326/addbf1/meta)
-6. **[Litovoli et al 2026 Computation]**
+6. **[Litovoli et al 2026 Computation]** (https://www.researchgate.net/publication/399891339_Development_and_Assessment_of_Simplified_Conductance_Models_for_the_Particle_Exhaust_in_Wendelstein_7-X)
 
 ## **Author**
 **Antonis Adamopoulos**

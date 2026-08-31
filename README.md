@@ -62,20 +62,31 @@ Import them via: `from Two_Point_Model_Solver import [SolverName]`
 Provides analytical models that connect the outputs of the Two-Point model (target conditions) directly to the divertor and subdivertor pressure.
 
 *   **`Divertor_Subdivertor_Analytical`**
+
     *   **Inputs:** `n_targ`, `T_targ`, `theta`
     *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
 
 **Note:** The user may also want to adjust some fixed parameters like: 
-- Particle capture coefficient `epsilon_x`,
-- PSI wetting area `A_wet`
-- Recycling coefficient `R`
+- Particle capture coefficient: `epsilon_x`,
+- PSI wetting area: `A_wet`
+- Recycling coefficient: `R`
 
 *   **`Divertor_Subdivertor_Conductance`**
-    *   **Inputs:** | **Outputs:**
+fkksdfkahfhakd
+
+    *   **Inputs:** `n_targ`, `T_targ`
+    *   **Outputs:**
+
 
 *   **`Divertor_Subdivertor_Dirk`**
-    *   **Inputs:** | **Outputs:**
+gdfsgfdsgdfgs
 
+    *   **Inputs:** `n_targ`, `T_targ`
+    *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
+
+**Note:** The user may also want to adjust the fixed parameters: 
+- Particle collection efficiency (= `N_in`/`N_targ`): `PCE`,
+- Particle removal efficiency (= `N_exhaust`/`N_in`): `PRE`
 
 
 #### `Post_Processing.py`

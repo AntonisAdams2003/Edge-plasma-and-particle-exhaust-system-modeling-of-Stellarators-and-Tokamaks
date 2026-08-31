@@ -8,7 +8,7 @@ Specifically, it models edge plasma transport using an extended 0D Two-Point mod
 ---
 
 ## Nomenclature
-*Provide a brief definition for your variables here so users don't have to guess.*
+A brief definition of the variables used:
 * `n_upst` / `n_targ`: Upstream / Target plasma density [m⁻³]
 * `T_upst` / `T_targ`: Upstream / Target plasma temperature [eV]
 * `Lc`: Connection length [m]

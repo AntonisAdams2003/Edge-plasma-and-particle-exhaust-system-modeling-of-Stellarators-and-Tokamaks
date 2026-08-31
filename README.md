@@ -63,13 +63,18 @@ Compares closed-form expressions estimating subdivertor pressure (NOT divertor p
 Import via:** `from Subdivertor_Models_Comparison import [ModelName]`
 
 *   **`Varoutis_subdivertor`**: Regression expressions from [5].
-    *   **Inputs**: `N_in_AEH`, `N_in_AEP` | **Outputs**: `p_sub_AEH`, `p_sub_AEP`
-*   **`Dirk_subdivertor`**: **[Description needed]**
-    *   **Inputs**: `N_in_AEH`, `N_in_AEP` | **Outputs**: `p_sub_AEH`, `p_sub_AEP`, `h_AEH`, `h_AEP`, `w_AEH`, `w_AEP`
-*   **`Litovoli_Haak_subdivertor`**: 2-reservoir conductance model from **[]**.
-    *   **Inputs**: `N_in_AEH`, `N_in_AEP` | **Outputs**: `p_sub_X`, `N_out_in_X`, `N_leak_in_X`, `N_pump_in_X` **(where X = AEH/AEP)**
-*   **`ParticleBalance_subdivertor`**: Particle balance model **introduced in this thesis**.
-    *   **Inputs / Outputs: Same as `Litovoli_Haak_subdivertor`.**
+    *   **Inputs**: `N_in_AEH`, `N_in_AEP`
+    *   **Outputs**: `p_sub_AEH`, `p_sub_AEP`
+
+*   **`Dirk_subdivertor`**: Analytical expression from Dirk's IPP presentation using conductances
+    *   **Inputs / Outputs**: Same as `Varoutis_subdivertor`
+
+*   **`Litovoli_Haak_subdivertor`**: 2-reservoir conductance model from [6].
+    *   **Inputs**: `N_in_AEH`, `N_in_AEP`
+    *   **Outputs**: `p_sub_X`, `N_out_in_X`, `N_leak_in_X`, `N_pump_in_X` **(where X = AEH and AEP)**
+ 
+*   **`ParticleBalance_subdivertor`**: Particle balance model introduced in this thesis.
+    *   **Inputs / Outputs**: Same as `Litovoli_Haak_subdivertor`
 
 
 
@@ -110,6 +115,7 @@ Fits numerical results of the Extended Stellarator Two-Point model to a logarith
 3. **[V Haak et al 2023 Plasma Phys. Control. Fusion]** (https://iopscience.iop.org/article/10.1088/1361-6587/acc8fb/meta)
 4. **[S. Varoutis et al 2024 Nucl. Fusion]** (https://iopscience.iop.org/article/10.1088/1741-4326/ad49b5)
 5. **[S. Varoutis et al 2025 Nucl. Fusion]** (https://iopscience.iop.org/article/10.1088/1741-4326/addbf1/meta)
+6. **[Litovoli et al 2026 Computation]**
 
 ## **Author**
 **Antonis Adamopoulos**

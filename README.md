@@ -63,7 +63,7 @@ Import them via: `from Two_Point_Model_Solver import [SolverName]`
 ### 📄 `Divertor_Subdivertor_Solver.py`
 Provides analytical models that connect the outputs of the Two-Point model (target conditions) directly to the divertor and subdivertor pressure.
 
-*   **`Divertor_Subdivertor_Analytical`**: Expression pipeline that is presented in thesis, using an approximate expression for the connection.  
+*   **`Divertor_Subdivertor_Analytical`**: Expression pipeline that is presented in thesis, using an approximate equation to connect the plasma with the neutral gas.  
     *   **Inputs:** `n_targ`, `T_targ`, `theta`
     *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
 
@@ -73,17 +73,13 @@ Provides analytical models that connect the outputs of the Two-Point model (targ
 > - Recycling coefficient: `R`
 
 
-*   **`Divertor_Subdivertor_Conductance`**: fkksdfkahfhakd
-    *   **Inputs:** `n_targ`, `T_targ`
-    *   **Outputs:**
-
-*   **`Divertor_Subdivertor_Dirk`**: gdfsgfdsgdfgs
+*   **`Divertor_Subdivertor_Dirk`**: Uses the Dirk's IPP presentation expression about divertor and subdivertor pressures, after assuming that 95% of the incoming plasma particles return to the core.
     *   **Inputs:** `n_targ`, `T_targ`
     *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
 
-> **Note:** The user may also want to adjust the fixed parameters: 
+> **Note:** The user may also want to adjust the fixed parameter: 
 > - Particle collection efficiency (= `N_in`/`N_targ`): `PCE`,
-> - Particle removal efficiency (= `N_exhaust`/`N_in`): `PRE`
+
 
 
 

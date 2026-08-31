@@ -81,9 +81,9 @@ Provides analytical models that connect the outputs of the Two-Point model (targ
     *   **Inputs:** `n_targ`, `T_targ`
     *   **Outputs:** `Gamma_targ`, `N_in_x`, `p_div_x`, `p_sub_x` (where x = AEH and AEP)
 
-> **Note:** The user may also want to adjust the fixed parameters: 
-> - Particle collection efficiency (= `N_in`/`N_targ`): `PCE`,
-> - Particle removal efficiency (= `N_exhaust`/`N_in`): `PRE`
+* > **Note:** The user may also want to adjust the fixed parameters: 
+* > - Particle collection efficiency (= `N_in`/`N_targ`): `PCE`,
+* > - Particle removal efficiency (= `N_exhaust`/`N_in`): `PRE`
 
 
 

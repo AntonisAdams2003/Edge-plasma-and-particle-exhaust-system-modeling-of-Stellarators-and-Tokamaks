@@ -23,6 +23,7 @@ A brief definition of the variables used:
 * `p_sub`: Subdivertor pressure [mbar]
 
 
+
 ## **Prerequisites**
 The scripts are written in Python 3 and require the installation of the following libraries:
 - `numpy`
@@ -153,6 +154,15 @@ Fits numerical results of the Extended Stellarator Two-Point model to a logarith
 - Do not execute `Two_Point_Model_Solver.py` or `Divertor_Subdivertor_Solver.py` directly; they are module libraries meant to be imported.
 - Use `Post_Processing.py` to evaluate the upstream-to-subdivertor flow using only upstream conditions.
 - Use the isolated subdivertor models in `Subdivertor_Models_Comparison.py` ONLY when the particle flow (`N_in`) through the pumping gaps is given.
+
+
+
+---
+
+
+## *Flow Chart*
+
+![Code Architecture Flowchart](assets/Flow_chart.drawio.png)
 
 
 ---
